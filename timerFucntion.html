@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>타이머 함수 -1</title>
+
+</head>
+
+<body>
+    <div id="contents">
+        0
+    </div>
+    <button id="btn">스탑</button>
+</body>
+<script>
+    $(document).ready(function(){
+    var $contents = $("#contents");
+    var cnt =0;
+    // alert(contents);
+    // setInterval(function(){
+    //     cnt++;
+    //     $contents.text(cnt);
+    // },1000)
+
+    // function addCnt(){
+    //     cnt++;
+    //     $contents.text(cnt);
+    // }
+
+    // setInterval() 를 이용해 1초마다 증가된 cnt값을 출력
+    var stopid =setInterval(function(){
+        cnt++;
+        $contents.text(cnt);    
+
+    },1000);
+    //버튼 클릭시 타이머 스탑
+    $("#btn").click(function(){
+    clearInterval(stopid);
+});
+});
+
+
+    
+</script>
+</html>

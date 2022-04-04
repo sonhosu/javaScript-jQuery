@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
+</head>
+<body>
+    <ul id="menu1">
+        <li>감자탕2</li>
+        <li id ="food" onclick="qwer()">감자탕</li>
+    </ul>
+    <script>
+        window.onload = function(){
+        var menu = document.getElementById("menu1");
+        var liArrays = menu.getElementsByTagName("li");      
+        // $("#food").click(function(){
+        //     $("#food").remove();
+        // });
+        }
+        function qwer(){
+            $("#food").hide();
+        }
+    </script>
+</body>
+</html>
